@@ -11,6 +11,13 @@ This repository provides the necessary code and a jupyter notebook for generatin
 This repository does not contain the raw logs from QNodeOS. That data is available at the [QNodeOS-artifact](https://data.4tu.nl/datasets/6aa42f05-6823-4848-b235-3ea19e39f4ae). The data folder in the artifact has the raw logs from QNodeOS executions. This repository uses the
 dqc_20240304 folder from v1 of the artifact.
 
+### Caveats - Clock Alignment
+
+The clocks of the server and client CNPUs and QNPUs are not synchronized so we do not have global coordinated timestamps. Moreover, the timestamps in the raw logs do not have consistent Unix timestamps either (instead they might be timestamps since a particular epoch). As a consequence, the trace generation currently aligns the server and client spans based on the partial ordering derived from the DQC execution as well as the
+entanglement generation process on the server and client QDevices as the devices must have aligned entanglement generation otherwise entangled states would not be possible.
+
+Consequently, the alignment may not necessarily be accurate.
+
 ## Viewing Traces
 
 Traces can then be uploaded and viewed in Jaeger.
