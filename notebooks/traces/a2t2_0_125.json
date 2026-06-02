@@ -1,0 +1,278 @@
+{
+  "data": [
+    {
+      "traceID": "trace126",
+      "spans": [
+        {
+          "traceID": "trace126",
+          "spanID": "925",
+          "operationName": "Server_Host",
+          "references": [],
+          "startTime": 110107294117940,
+          "duration": 1588889,
+          "tags": [],
+          "logs": [
+            {
+              "timestamp": 110107294117,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "SUBROUTINE_SEND_ATTEMPT"
+                }
+              ]
+            },
+            {
+              "timestamp": 110107294133,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "SUBROUTINE_SENT"
+                }
+              ]
+            },
+            {
+              "timestamp": 110107295653,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "RESULT_RCVD"
+                }
+              ]
+            },
+            {
+              "timestamp": 110107295666,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "CLAS_MSG_RCVD"
+                }
+              ]
+            },
+            {
+              "timestamp": 110107295685,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "SUBROUTINE_SEND_ATTEMPT"
+                }
+              ]
+            },
+            {
+              "timestamp": 110107295695,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "SUBROUTINE_SENT"
+                }
+              ]
+            },
+            {
+              "timestamp": 110107295706,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "RESULT_RCVD"
+                }
+              ]
+            }
+          ],
+          "processID": "server_host",
+          "warnings": null
+        },
+        {
+          "traceID": "trace126",
+          "spanID": "125",
+          "operationName": "Client_Host",
+          "references": [],
+          "startTime": 110107294113050,
+          "duration": 1606470,
+          "tags": [],
+          "logs": [
+            {
+              "timestamp": 265643338150,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "SUBROUTINE_SENT"
+                }
+              ]
+            },
+            {
+              "timestamp": 265643339723,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "RESULT_RCVD"
+                }
+              ]
+            },
+            {
+              "timestamp": 265643339728,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "CLAS_MSG_SENT"
+                }
+              ]
+            }
+          ],
+          "processID": "client_host",
+          "warnings": null
+        },
+        {
+          "traceID": "trace126",
+          "spanID": "1450",
+          "operationName": "Server_QNodeOS",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "trace126",
+              "spanID": "925"
+            }
+          ],
+          "startTime": 110107294117941,
+          "duration": 151300,
+          "tags": [],
+          "logs": [
+            {
+              "timestamp": 127420,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "EGP_NEI_OK"
+                }
+              ]
+            }
+          ],
+          "processID": "server_qnodeos",
+          "warnings": null
+        },
+        {
+          "traceID": "trace126",
+          "spanID": "1451",
+          "operationName": "Server_QNodeOS",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "trace126",
+              "spanID": "925"
+            }
+          ],
+          "startTime": 110107294274101,
+          "duration": 660,
+          "tags": [],
+          "logs": [],
+          "processID": "server_qnodeos",
+          "warnings": null
+        },
+        {
+          "traceID": "trace126",
+          "spanID": "525",
+          "operationName": "Client_QNodeOS",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "trace126",
+              "spanID": "125"
+            }
+          ],
+          "startTime": 110107294113051,
+          "duration": 156649,
+          "tags": [],
+          "logs": [
+            {
+              "timestamp": 127420,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "EGP_NEI_OK"
+                }
+              ]
+            }
+          ],
+          "processID": "client_qnodeos",
+          "warnings": null
+        },
+        {
+          "traceID": "trace126",
+          "spanID": "2525",
+          "operationName": "Entanglement Generation",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "trace126",
+              "spanID": "1450"
+            }
+          ],
+          "startTime": 110107294118611,
+          "duration": 150400,
+          "tags": [],
+          "logs": [],
+          "processID": "server_qdevice",
+          "warnings": null
+        },
+        {
+          "traceID": "trace126",
+          "spanID": "2125",
+          "operationName": "Entanglement Generation",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "trace126",
+              "spanID": "525"
+            }
+          ],
+          "startTime": 110107294118601,
+          "duration": 150440,
+          "tags": [],
+          "logs": [],
+          "processID": "client_qdevice",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "server_host": {
+          "serviceName": "server_host",
+          "tags": []
+        },
+        "client_host": {
+          "serviceName": "client_host",
+          "tags": []
+        },
+        "server_qdevice": {
+          "serviceName": "server_qdevice",
+          "tags": []
+        },
+        "client_qdevice": {
+          "serviceName": "client_qdevice",
+          "tags": []
+        },
+        "server_qnodeos": {
+          "serviceName": "server_qnodeos",
+          "tags": []
+        },
+        "client_qnodeos": {
+          "serviceName": "client_qnodeos",
+          "tags": []
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 1,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}
